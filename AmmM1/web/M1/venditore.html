@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>e-shop RUN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Giuseppe Cocco">
+        <meta name="description" content="abbigliamento running">
+    </head>
+    <body>
+        
+        <!--pagina venditore-->
+        <div id="page_vend">
+            
+            <!--sezione header-->
+            <header>
+                <!-- logo -->
+                <div id="logo">
+                    <img title="e-shop RUN" alt="logo e-shop" src="../IMG/logo.png" width="150" height="200">
+                </div>
+                <hr/>
+                <h1>e-shop RUN</h1>     
+            </header>
+        
+                
+        
+            <!--sezione nav-->
+            <nav>    
+                <!--menu navigazione-->
+                <div id="nav">    
+                    <h3>Menu navigazione sito</h3>
+                    <ul>
+                        <li><a href="descrizione.html">Vai alla pagina descrizione</a></li>
+                        <li><a href="cliente.html">Vai alla pagine cliente</a></li>
+                    </ul>
+                </div>
+            </nav>    
+            <hr/>
+         
+ 
+            <article>
+            <h2>Pagina venditore</h2>    
+            <div id="ins_art">
+               
+            <h4>Inserimento nuovo articolo</h4>
+            <form>
+            <fieldset>    
+                <!--scelta tipo articolo-->
+                <fieldset>    
+                    <legend>Tipo:</legend>
+                        <input type="radio" name="Articolo" value="Scarpe" checked>Scarpe<br>
+                        <input type="radio" name="Articolo" value="Abbigliamento">Abbigliamento<br>
+                        <input type="radio" name="Articolo" value="Accessori">Accessori<br>
+                </fieldset>
+                <br>
+            
+                 <!--carica URL foto articolo-->
+                <fieldset>
+                    <legend>Carica foto:</legend>
+                    <input type="file" name="img" accept="image/*">
+                </fieldset>    
+                <br>
+            
+                <!--inserimento descrizione-->
+                <fieldset>
+                    <legend>Descrizione:</legend>
+                        <textarea name="descrizione" rows="2" cols="30"></textarea> 
+                </fieldset>     
+                <br>
+         
+                <!--Inserimento prezzo-->
+                <fieldset>
+                    <legend>Prezzo:</legend>
+                        <input type="number" name="quantita" >
+                </fieldset> 
+                <br>
+          
+                <!--inserimento quantità-->
+                <fieldset>
+                    <legend>Quantità:</legend>
+                        <input type="number" name="quantita" > 
+                </fieldset>   
+                <br> 
+          
+                <input type="submit" value="Invia">
+                
+                <br>      
+                <br>
+                
+            </fieldset>
+            </form>
+            </div>
+            </article>
+                    
+            <!--sezione footer-->
+            <footer>
+                <div id="footer">
+                    <h4>e-shop RUN</h4>
+                </div>
+                <div class="validator">
+                    <p>
+                        <a href="http://validator.w3.org/check/referer" class="xhtml" title="Questa pagina contiene codice html valido">
+                            <abbr title="eXtensible Hypertext Markup Language">HTML</abbr>Valido
+                        </a> 
+                        
+                    </p>
+                    
+                </div>     
+            </footer>          
+        </div>        
+    </body>
+</html>
