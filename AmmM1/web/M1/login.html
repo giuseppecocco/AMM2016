@@ -18,40 +18,37 @@ and open the template in the editor.
             
             <!--sezione header-->
             <header>
-            
                 <!-- logo -->
                 <div id="logo">
                     <img title="e-shop RUN" alt="logo e-shop" src="../IMG/logo.png" width="150" height="200">
                 </div>
                 <hr/>
                 <h1>e-shop RUN</h1>         
+            </header>
             
-                <!--sezione nav-->
-                <nav>    
-                          
-                    <!--menu navigazione-->
-                    <div id="nav">    
-                        <h3>Menu navigazione sito</h3>
-                        <ul>
-                            <li><a href="descrizione.html">Vai alla pagina descrizione</a></li>
-                            <li><a href="cliente.html">Vai alla pagine cliente</a></li>
-                            <li><a href="venditore.html">Vai alla pagine venditore</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>        
-            
-            
+            <!--sezione nav-->
+            <nav>             
+                <!--menu navigazione-->
+                <div id="nav">    
+                    <h3>Menu navigazione sito</h3>
+                    <ul>
+                        <li><a href="descrizione.html">Vai alla pagina descrizione</a></li>
+                        <li><a href="cliente.html">Vai alla pagina cliente</a></li>
+                        <li><a href="venditore.html">Vai alla pagina venditore</a></li>
+                    </ul>
+                </div>
+            </nav>
+                   
+            <!--sezione login-->
             <section>
-                <h3>Login:</h3>
-                <!--form login--> 
-                <form>
+                <h3>Login</h3>
+                <form method="GET">
                    <fieldset>
-                       <legend>Inserisci le tue credenziali:</legend>   
-                       Username:<br>
-                       <input type="text" name="user"><br>
-                       Password:<br>
-                       <input type="password" name="pwd"><br><br>
+                       <legend>Inserisci le tue credenziali</legend>   
+                       <label for="user">Username:</label>
+                       <input type="text" name="user" id="user">
+                       <label for="pwd">Password:</label>
+                       <input type="password" name="pwd" id="pwd">
                        <input type="submit" value="Invia"><br>
                    </fieldset>                    
                </form>
