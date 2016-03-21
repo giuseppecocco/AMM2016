@@ -26,8 +26,7 @@ and open the template in the editor.
                 <hr/>
                 <h1>e-shop RUN</h1>     
             </header>
-        
-                
+              
         
             <!--sezione nav-->
             <nav>    
@@ -42,55 +41,46 @@ and open the template in the editor.
             </nav>    
             <hr/>
          
- 
+            <!--contenuti-->
             <article>
             <h2>Pagina venditore</h2>    
             <div id="ins_art">
                
             <h4>Inserimento nuovo articolo</h4>
-            <form>
-            <fieldset>    
+            <form method="GET">
+            <fieldset>  
+                
                 <!--scelta tipo articolo-->
-                <fieldset>    
-                    <legend>Tipo:</legend>
-                        <input type="radio" name="Articolo" value="Scarpe" checked>Scarpe<br>
-                        <input type="radio" name="Articolo" value="Abbigliamento">Abbigliamento<br>
-                        <input type="radio" name="Articolo" value="Accessori">Accessori<br>
-                </fieldset>
+                <label for="tipo">Tipo:</label>
+                <input type="radio" id="tipo" name="Articolo" value="Scarpe">Scarpe<br>
+                <input type="radio" name="Articolo" value="Abbigliamento">Abbigliamento<br>
+                <input type="radio" name="Articolo" value="Accessori">Accessori<br>
                 <br>
             
-                 <!--carica URL foto articolo-->
-                <fieldset>
-                    <legend>Carica foto:</legend>
-                    <input type="file" name="img" accept="image/*">
-                </fieldset>    
-                <br>
+                <!--carica URL foto articolo-->
+                <label for="img">Carica foto:</label>
+                <input type="file" id="img" name="img" accept="image/*">  
+                <br><br>
             
                 <!--inserimento descrizione-->
-                <fieldset>
-                    <legend>Descrizione:</legend>
-                        <textarea name="descrizione" rows="2" cols="30"></textarea> 
-                </fieldset>     
-                <br>
+                <label for="descrizione">Descrizione:</label>
+                <textarea name="descrizione" id="descrizione" rows="2" cols="30"></textarea> 
+                <br><br>
          
                 <!--Inserimento prezzo-->
-                <fieldset>
-                    <legend>Prezzo:</legend>
-                        <input type="number" name="quantita" >
-                </fieldset> 
-                <br>
+                <label for="quantita">Prezzo:</label>
+                <input type="number" id="quantita" name="quantita">
+                <br><br>
           
                 <!--inserimento quantità-->
-                <fieldset>
-                    <legend>Quantità:</legend>
-                        <input type="number" name="quantita" > 
-                </fieldset>   
-                <br> 
-          
-                <input type="submit" value="Invia">
+                <label>Quantità:</label>
+                <input type="number" name="quantita" >  
+                <br><br> 
                 
-                <br>      
-                <br>
+                <!--pulsanti-->
+                <input type="submit" value="Invia">
+                <input type="reset" value="cancella">
+                <br><br>
                 
             </fieldset>
             </form>
