@@ -1,0 +1,122 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-mar-2016, 15.27.24
+    Author     : Giuseppe
+*/
+
+body {
+    margin: 0;
+    padding: 0px;
+    border: 0;
+    
+
+    font-family:"Times New Roman", Times, serif;
+}
+
+#page_descr {
+    width: 100%;
+    margin: 0 auto;
+}
+#page_cli {
+    width: 100%;
+    margin: 0 auto;   
+}
+#page_login {
+    width: 100%;
+    margin: 0 auto;
+}
+#page_vend {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header {
+    height: 200px;
+    background: transparent url("../IMG/logo.png") no-repeat 0 0px;
+}
+
+/*
+div#header#logo {
+    
+   
+}*/
+/*
+#logo h1 {
+    background-color: green;
+    color: red;
+}
+
+
+h1 {
+    
+}
+
+h2 {
+    
+}
+
+h3 {
+    
+}
+
+h4 {
+    
+}
+
+*/
+/* form
+label::after, label::before {
+content: '\A';
+white-space: pre;
+}
+input:focus, textarea:focus{
+    border: 1px solid dimgrey;
+    /*font-weight: bold;
+    /*color: greenyellow;  
+} */
+
+/* link */
+/*
+a:link {
+    color: midnightblue;
+    text-decoration: none;
+}
+a:visited {
+    color: purple; 
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;   
+}
+*/
+
+/* tabelle*/
+/*
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+ }
+ th {
+    text: bold;
+    text-align: center;
+    padding: 8px;
+ }
+td {  
+    text-align: center;
+    padding: 8px;
+}
+tr:nth-child(2n+1){
+    background-color: #f2f2f2
+}
+tr:nth-child(2n+2){
+    background-color: #DDDDDD
+}
+tr:nth-child(1){
+    background-color: #AAAAAA
+}
+*/
