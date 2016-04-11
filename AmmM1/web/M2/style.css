@@ -5,82 +5,79 @@ and open the template in the editor.
 */
 /* 
     Created on : 24-mar-2016, 15.27.24
-    Author     : Giuseppe
+    Author     : Giuseppe Cocco
 */
 
-body {
-    margin: 0;
-    padding: 0px;
-    border: 0;
+html body {
+    height: 100%;
+}
+#page {
     
-
-    font-family:"Times New Roman", Times, serif;
+    font: 13px/20px "Open Sans", Arial, sans-serif; 
+}
+body {
+    z-index: 0;
+}
+#page {
+    z-index: 1;
+}
+#header #nav #menu #sidebar1 sidebar2 #article #footer {
+    z-index: 2;
+}
+h1 {
+    color: red;
+}
+h2 {
+    background-color: whitesmoke;
+    color: darkred;
+}
+#article h2 {
+    background-color: white;
+    color: black;
 }
 
-#page_descr {
-    width: 100%;
-    margin: 0 auto;
+#nav h3, #menu h3, #login h3 {
+    background-color: beige;
+    color: darkred ;
 }
-#page_cli {
-    width: 100%;
-    margin: 0 auto;   
+h3 {
+    background-color: whitesmoke;
+    color: blue;
 }
-#page_login {
-    width: 100%;
-    margin: 0 auto;
-}
-#page_vend {
-    width: 100%;
-    margin: 0 auto;
+h4 {
+    background-color: whitesmoke;
+    color: graytext;
 }
 
 #header {
-    height: 200px;
-    background: transparent url("../IMG/logo.png") no-repeat 0 0px;
+    background: transparent url("../IMG/logo.png")no-repeat left top;
+    background-size: 100px 80px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100px; 
 }
-
-/*
-div#header#logo {
-    
-   
-}*/
-/*
 #logo h1 {
-    background-color: green;
-    color: red;
+    vertical-align: middle;
+    margin-left: 100pX;
 }
-
-
-h1 {
-    
+#footer p {
+    display: block;
+    margin: auto;
+    text-align: center;
 }
-
-h2 {
-    
+#footer h4  {
+    display: block;
+    margin: auto;
+    text-align: center;
 }
-
-h3 {
-    
+#ins_art, #login {
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
-
-h4 {
-    
-}
-
-*/
-/* form
-label::after, label::before {
-content: '\A';
-white-space: pre;
-}
-input:focus, textarea:focus{
-    border: 1px solid dimgrey;
-    /*font-weight: bold;
-    /*color: greenyellow;  
-} */
-
-/* link */
-/*
 a:link {
     color: midnightblue;
     text-decoration: none;
@@ -91,18 +88,35 @@ a:visited {
 }
 a:hover {
     text-decoration: underline;   
+	font-weight: bold;
 }
-*/
-
-/* tabelle*/
-/*
+label {
+    float: left;
+    width: 120px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+input[type="file"] {
+    width: 200px;
+}
+input {
+    width: 80px;
+} 
+input:focus, textarea:focus {
+  border: 1px solid black;
+}
+input[type="submit"] {
+    margin-left: 15px;
+}
 table {
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid;
     border-collapse: collapse;
-    width: 100%;
+    width: 60%;
  }
  th {
-    text: bold;
+    font-weight: bold;
     text-align: center;
     padding: 8px;
  }
@@ -110,13 +124,264 @@ td {
     text-align: center;
     padding: 8px;
 }
-tr:nth-child(2n+1){
-    background-color: #f2f2f2
+/* selettore classi per alternare i colori sulle righe delle tabelle */
+.dispari {
+	background-color: grey;
 }
-tr:nth-child(2n+2){
-    background-color: #DDDDDD
+.pari {
+	background-color: #DDDDDD;
 }
-tr:nth-child(1){
-    background-color: #AAAAAA
+.xhtml{
+    
 }
-*/
+.css{
+    
+}
+
+
+/* LARGHEZZA >= 1024PX  - LAYOUT 2/3 COLONNE */
+
+@media only screen and (min-width: 1024px)
+{
+
+    #page {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+        height: auto !important;
+        height: 100%;
+	padding-top:0px;
+        margin-bottom: -100px;
+    }     
+    #header {
+	position: absolute;
+	height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 10px;
+    }
+    #nav {
+        position: absolute;
+	background: whitesmoke;
+        height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 111px;
+    }
+     #nav ul li {
+	display: inline;
+    }       
+              
+   #sidebar1 {
+	position: absolute;
+	width: 20%;
+	left: 2%;
+	top: 212px;
+    }
+    #sidebar1 #login {
+	position: absolute;
+        height: 100px;
+	width: 96%;
+        min-width: 96%;
+	left: 2%;
+	top: 0px;
+    }
+    #sidebar2 {
+	position: absolute;
+	width: 20%;
+	right: 2%;
+	top: 212px;
+    }
+    #article {
+	position: absolute;
+	width: 55%;
+	margin-left: 22%;
+	top: 212px;
+    }
+    #article #tab_art {
+        position: absolute;
+	height: 100px;
+	width: 50%;
+        min-width: 50%;
+	left: 25%;
+	top: 10px;
+        margin: 0 auto;
+    }
+    /*#push {
+        height: 100px;
+        clear: both;
+    }*/
+    #footer {
+	position: absolute;
+	height: 100px;
+        /*clear: both;*/
+	width: 96%;
+	left: 2%;
+	bottom: 2%;
+    }
+}
+
+
+/* LARGHEZZE COMPRESE TRA 480px E 1024xp - LAYOUT MAX 2 COLONNE*/
+
+@media only screen and (min-width: 480px) and (max-width: 1280px)
+{
+    #page {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+        height: auto !important;
+        height: 100%;
+	padding-top:0px;
+        margin-bottom: -100px;
+	}
+        
+    #header {
+	position: absolute;
+        height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 0px;
+    }
+    #nav {
+	position: absolute;
+        background: whitesmoke;
+	height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 111px;
+    }
+    #nav ul li {
+	display: inline;
+    }       
+        
+    #sidebar1 {
+	position: absolute;
+	width: 20%;
+	left: 2%;
+	top: 212px;
+    }        
+      
+    #sidebar1 #login {
+	position: absolute;
+	height: 100px;
+	width: 95%;
+        min-width: 95%;
+	left: 2%;
+	top: 0px;
+    }
+    #sidebar2 {
+	display: none;
+    }
+    #article {
+	position: absolute;
+	width: 55%;
+        min-width: 70%;
+	margin-left: 22%;
+	top: 212px;
+    }
+    #article #tab_art {
+        position: absolute;
+	height: 100px;
+	width: 50%;
+	left: 25%;
+	top: 10px;
+        margin: 0 auto;
+    }
+    /*
+    #push {
+        height: 100px;
+        clear: both;
+    }*/
+    
+    #footer {
+	position: absolute;
+        height: 100px;
+        /*clear: both;*/
+	width: 96%;
+	left: 2%;
+	bottom: 2%;
+	}
+}
+
+
+/* LARGHEZZA <= 480px - LAYOUT 1 COLONNA*/
+
+@media only screen and (max-width: 480px)
+{
+    #page {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+        height: auto !important;
+        height: 100%;
+	padding-top:0px;
+        margin-bottom: -100px;
+	}
+        
+    #header {
+	position: absolute;
+        height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 0px;
+    }
+    #nav {
+	position: absolute;
+        border-bottom: 1px solid black;
+	height: 120px;
+	width: 96%;
+	left: 2%;
+	top: 101px;
+    } 
+    
+    #sidebar1 #login {
+	position: absolute;
+        border-bottom: 1px solid black;
+	height: 80px;
+	width: 95%;
+        min-width: 95%;
+	left: 2%;
+	top: 221px;
+    }
+    #sidebar2 {
+	display: none;
+    }
+    #article {
+	position: absolute;
+	width: 90%;
+        min-width: 100%;
+	margin-left: 0%;
+	top: 303px;
+    }
+    #article #tab_art {
+        position: absolute;
+	height: 100px;
+	width: 90%;
+        min-width: 50%;
+	left: 2%;
+	top: 0px;
+        margin: 0 auto;
+    }
+    #article #ins_art {
+        position: absolute;
+	height: 100px;
+	width: 90%;
+        min-width: 90%;
+	left: 2%;
+	top: 0px;
+        margin: 0 auto;
+    } /*  
+    #push {
+        height: 100px;
+        clear: both;
+    }*/
+    #footer {
+	position: absolute;
+	height: 100px;
+        /*clear: both;*/
+	width: 96%;
+	left: 2%;
+	bottom: 0%;
+	}
+}
