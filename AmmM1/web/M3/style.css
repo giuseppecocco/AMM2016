@@ -1,0 +1,387 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-mar-2016, 15.27.24
+    Author     : Giuseppe Cocco
+*/
+
+html body {
+    height: 100%;
+}
+#page {
+    
+    font: 13px/20px "Open Sans", Arial, sans-serif; 
+}
+body {
+    z-index: 0;
+}
+#page {
+    z-index: 1;
+}
+#header #nav #menu #sidebar1 sidebar2 #article #footer {
+    z-index: 2;
+}
+h1 {
+    color: red;
+}
+h2 {
+    background-color: whitesmoke;
+    color: darkred;
+}
+#article h2 {
+    background-color: white;
+    color: black;
+}
+
+#nav h3, #menu h3, #login h3 {
+    background-color: beige;
+    color: darkred ;
+}
+h3 {
+    background-color: whitesmoke;
+    color: blue;
+}
+h4 {
+    background-color: whitesmoke;
+    color: graytext;
+}
+
+#header {
+    background: transparent url("../IMG/logo.png")no-repeat left top;
+    background-size: 100px 80px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100px; 
+}
+#logo h1 {
+    vertical-align: middle;
+    margin-left: 100pX;
+}
+#footer p {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#footer h4  {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#ins_art, #login {
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+a:link {
+    color: midnightblue;
+    text-decoration: none;
+}
+a:visited {
+    color: purple; 
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;   
+	font-weight: bold;
+}
+label {
+    float: left;
+    width: 120px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+input[type="file"] {
+    width: 200px;
+}
+input {
+    width: 80px;
+} 
+input:focus, textarea:focus {
+  border: 1px solid black;
+}
+input[type="submit"] {
+    margin-left: 15px;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 60%;
+ }
+ th {
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+ }
+td {  
+    text-align: center;
+    padding: 8px;
+}
+/* selettore classi per alternare i colori sulle righe delle tabelle */
+.dispari {
+	background-color: grey;
+}
+.pari {
+	background-color: #DDDDDD;
+}
+.xhtml{
+    
+}
+.css{
+    
+}
+
+
+/* LARGHEZZA >= 1024PX  - LAYOUT 2/3 COLONNE */
+
+@media only screen and (min-width: 1024px)
+{
+
+    #page {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+        height: auto !important;
+        height: 100%;
+	padding-top:0px;
+        margin-bottom: -100px;
+    }     
+    #header {
+	position: absolute;
+	height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 10px;
+    }
+    #nav {
+        position: absolute;
+	background: whitesmoke;
+        height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 111px;
+    }
+     #nav ul li {
+	display: inline;
+    }       
+              
+   #sidebar1 {
+	position: absolute;
+	width: 20%;
+	left: 2%;
+	top: 212px;
+    }
+    #sidebar1 #login {
+	position: absolute;
+        height: 100px;
+	width: 96%;
+        min-width: 96%;
+	left: 2%;
+	top: 0px;
+    }
+    #sidebar2 {
+	position: absolute;
+	width: 20%;
+	right: 2%;
+	top: 212px;
+    }
+    #article {
+	position: absolute;
+	width: 55%;
+	margin-left: 22%;
+	top: 212px;
+    }
+    #article #tab_art {
+        position: absolute;
+	height: 100px;
+	width: 50%;
+        min-width: 50%;
+	left: 25%;
+	top: 10px;
+        margin: 0 auto;
+    }
+    /*#push {
+        height: 100px;
+        clear: both;
+    }*/
+    #footer {
+	position: absolute;
+	height: 100px;
+        /*clear: both;*/
+	width: 96%;
+	left: 2%;
+	bottom: 2%;
+    }
+}
+
+
+/* LARGHEZZE COMPRESE TRA 480px E 1024xp - LAYOUT MAX 2 COLONNE*/
+
+@media only screen and (min-width: 480px) and (max-width: 1280px)
+{
+    #page {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+        height: auto !important;
+        height: 100%;
+	padding-top:0px;
+        margin-bottom: -100px;
+	}
+        
+    #header {
+	position: absolute;
+        height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 0px;
+    }
+    #nav {
+	position: absolute;
+        background: whitesmoke;
+	height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 111px;
+    }
+    #nav ul li {
+	display: inline;
+    }       
+        
+    #sidebar1 {
+	position: absolute;
+	width: 20%;
+	left: 2%;
+	top: 212px;
+    }        
+      
+    #sidebar1 #login {
+	position: absolute;
+	height: 100px;
+	width: 95%;
+        min-width: 95%;
+	left: 2%;
+	top: 0px;
+    }
+    #sidebar2 {
+	display: none;
+    }
+    #article {
+	position: absolute;
+	width: 55%;
+        min-width: 70%;
+	margin-left: 22%;
+	top: 212px;
+    }
+    #article #tab_art {
+        position: absolute;
+	height: 100px;
+	width: 50%;
+	left: 25%;
+	top: 10px;
+        margin: 0 auto;
+    }
+    /*
+    #push {
+        height: 100px;
+        clear: both;
+    }*/
+    
+    #footer {
+	position: absolute;
+        height: 100px;
+        /*clear: both;*/
+	width: 96%;
+	left: 2%;
+	bottom: 2%;
+	}
+}
+
+
+/* LARGHEZZA <= 480px - LAYOUT 1 COLONNA*/
+
+@media only screen and (max-width: 480px)
+{
+    #page {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+        height: auto !important;
+        height: 100%;
+	padding-top:0px;
+        margin-bottom: -100px;
+	}
+        
+    #header {
+	position: absolute;
+        height: 100px;
+	width: 96%;
+	left: 2%;
+	top: 0px;
+    }
+    #nav {
+	position: absolute;
+        border-bottom: 1px solid black;
+	height: 120px;
+	width: 96%;
+	left: 2%;
+	top: 101px;
+    } 
+    
+    #sidebar1 #login {
+	position: absolute;
+        border-bottom: 1px solid black;
+	height: 80px;
+	width: 95%;
+        min-width: 95%;
+	left: 2%;
+	top: 221px;
+    }
+    #sidebar2 {
+	display: none;
+    }
+    #article {
+	position: absolute;
+	width: 90%;
+        min-width: 100%;
+	margin-left: 0%;
+	top: 303px;
+    }
+    #article #tab_art {
+        position: absolute;
+	height: 100px;
+	width: 90%;
+        min-width: 50%;
+	left: 2%;
+	top: 0px;
+        margin: 0 auto;
+    }
+    #article #ins_art {
+        position: absolute;
+	height: 100px;
+	width: 90%;
+        min-width: 90%;
+	left: 2%;
+	top: 0px;
+        margin: 0 auto;
+    } /*  
+    #push {
+        height: 100px;
+        clear: both;
+    }*/
+    #footer {
+	position: absolute;
+	height: 100px;
+        /*clear: both;*/
+	width: 96%;
+	left: 2%;
+	bottom: 0%;
+	}
+}
